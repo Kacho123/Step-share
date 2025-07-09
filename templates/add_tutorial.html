@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Tutorial</title>
+</head>
+<body>
+    <h1>➕ Add a New Tutorial</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Description:</label><br>
+        <textarea name="description" required></textarea><br><br>
+
+        <label>Upload Image:</label><br>
+        <input type="file" name="image" accept="image/*"><br><br>
+
+        <input type="submit" value="Add Tutorial">
+    </form>
+    <br>
+    <a href="/">← Back to Tutorials</a>
+</body>
+</html>

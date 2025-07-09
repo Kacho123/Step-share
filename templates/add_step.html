@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Step</title>
+</head>
+<body>
+    <h1>Add Step to Tutorial</h1>
+    <form method="POST">
+        <label>Step Number: <input type="number" name="step_number" required></label><br><br>
+        <label>Step Text: <textarea name="step_text" required></textarea></label><br><br>
+        <button type="submit">Add Step</button>
+    </form>
+    <a href="{{ url_for('tutorial', tutorial_id=tutorial_id) }}">← Back to Tutorial</a>
+</body>
+</html>
+

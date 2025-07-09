@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Step Share</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📚 Step Share Tutorials</h1>
+    <a href="/add">➕ Add New Tutorial</a>
+    <ul>
+        {% for id, title, description, image in tutorials %}
+        <li>
+            <h2>{{ title }}</h2>
+            {% if image %}
+            <img src="{{ url_for('static', filename=image) }}" alt="{{ title }}" width="300">
+            {% endif %}
+            <p>{{ description }}</p>
+            <a href="{{ url_for('tutorial', tutorial_id=id) }}">View Steps →</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

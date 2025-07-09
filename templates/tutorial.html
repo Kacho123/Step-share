@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Step Share - Tutorial</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📋 Tutorial Steps</h1>
+    <ol>
+        {% for step_number, step_text in steps %}
+            <li><strong>Step {{ step_number }}:</strong> {{ step_text }}</li>
+        {% endfor %}
+    </ol>
+
+    <br>
+    <a href="{{ url_for('index') }}">← Back</a>
+</body>
+</html>
